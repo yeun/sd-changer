@@ -1,0 +1,26 @@
+{
+  "name": "sd-changer",
+  "engines": {
+    "sketch": ">=3.0"
+  },
+  "skpm": {
+    "name": "sd-changer",
+    "manifest": "src/manifest.json",
+    "main": "sd-changer.sketchplugin",
+    "assets": [
+      "assets/**/*"
+    ]
+  },
+  "scripts": {
+    "build": "skpm-build",
+    "watch": "skpm-build --watch",
+    "start": "skpm-build --watch --run",
+    "postinstall": "npm run build && skpm-link"
+  },
+  "devDependencies": {
+    "@skpm/builder": "^0.5.2"
+  },
+  "author": "jeongheeyeun <heeyeun.design@gmail.com>",
+  "repository": "https://github.com/yeun/sd-changer",
+  "description": "Converts Apple SD Gothic Neo font to SF Pro Display"
+}

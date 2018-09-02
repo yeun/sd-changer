@@ -1,0 +1,23 @@
+{
+  "name" : "SD Chagner",
+  "description" : "Converts Apple SD Gothic Neo font to SF Pro Display",
+  "author" : "Heeyeun Jeong",
+  "authorEmail" : "heeyeun.design@gmail.com",
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "icon": "icon.png",
+  "commands": [
+    {
+      "name": "SD Chagner",
+      "identifier": "sd-changer",
+      "script": "./sd-changer.js",
+      "shortcut" : "shift option cmd d"
+    }
+  ],
+  "menu": {
+    "isRoot": true,
+    "items": [
+      "sd-changer"
+    ]
+  }
+}
