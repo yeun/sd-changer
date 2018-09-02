@@ -22,5 +22,6 @@
   },
   "author": "jeongheeyeun <heeyeun.design@gmail.com>",
   "repository": "https://github.com/yeun/sd-changer",
-  "description": "Converts Apple SD Gothic Neo font to SF Pro Display"
+  "description": "Converts Apple SD Gothic Neo font to SF Pro Display",
+  "version": "1.0.0"
 }
