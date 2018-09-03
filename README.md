@@ -2,6 +2,8 @@
 
 SD Changer는 한국어로 언어 설정 된 iOS 화면을 더 쉽게 디자인 하도록, Apple SD Gothic Neo 폰트를 일괄로 SF Pro Display로 바꿔주는 Sketch plugin 입니다.
 
+![SD Changer preview](sd-preview.gif)
+
 ## Keys 
 
 - Menu `Plugins` › `SD Changer`  
