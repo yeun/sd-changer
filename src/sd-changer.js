@@ -6,23 +6,38 @@ export default function(context) {
     function changeFont(layer) {
         var fontName = layer.fontPostscriptName()
         var fontWeight = fontName.split("-")[1]
-        var fontWeights = {
+        var sdFontWeights = {
             "Thin": "Light",
             "UltraLight": "Light",
             "Light": "Light",
             "Regular": "Regular",
             "Medium": "Medium",
-            "SemiBold": "Semibold",
+            "SemiBold": "SemiBold",
             "Bold": "Bold",
             "ExtraBold": "Heavy",
             "Heavy": "Heavy"
         };
-        var weight = fontWeights[fontWeight]
+        var sfFontWeights = {
+            "Thin": "Thin",
+            "UltraLight": "UltraLight",
+            "Light": "Light",
+            "Regular": "Regular",
+            "Medium": "Medium",
+            "SemiBold": "SemiBold",
+            "Bold": "Bold",
+            "ExtraBold": "ExtraBold",
+            "Heavy": "Heavy"
+        };
+        var sdWeight = sdFontWeights[fontWeight]
+        var sfWeight = sfFontWeights[fontWeight]
 
         if (fontName.hasPrefix("AppleSDGothicNeo")) {
             layer.select_byExpandingSelection(true, true)
-            layer.fontPostscriptName = "SFProDisplay-" + weight
+            layer.fontPostscriptName = "SFProDisplay-" + sdWeight
             return true
+        } else if (fontName.hasPrefix("SFProDisplay")) {
+            layer.select_byExpandingSelection(true, true)
+            layer.fontPostscriptName = "SFProDisplay-" + sfWeight
         }
         return false
     }
@@ -70,6 +85,6 @@ export default function(context) {
     if (totalCount == 0) {
         doc.showMessage("바꿀 레이어가 없습니다 😲")
     } else {
-        doc.showMessage(totalCount + " 개의 산돌 고딕 레이어를 바꿨습니다 😎")
+        doc.showMessage(totalCount + " 개의 레이어를 SF Display로 바꿨습니다 😎")
     }
 }
